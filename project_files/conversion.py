@@ -1,6 +1,6 @@
 from currency_converter import CurrencyConverter
 
-c = CurrencyConverter()
+c = CurrencyConverter()  # Python API (Only europe conversion)
 
 
 def converter(value, fromCurrency, toCurrency):
@@ -8,6 +8,3 @@ def converter(value, fromCurrency, toCurrency):
         return c.convert(value, fromCurrency.upper(), toCurrency.upper())
     except ValueError:
         return "Currency chosen is not supported"
-
-
-print(converter(100, "EUR", "OOA"))
